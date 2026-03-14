@@ -1,0 +1,90 @@
+/* SECTION 05: Typography - Font Imports */
+/* Plus Jakarta Sans: Bold 700, SemiBold 600 */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+/* Inter: Regular 400, Medium 500 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* SECTION 05: Base Typography Settings */
+  body {
+    @apply font-body text-body text-primary-navy bg-secondary-offwhite;
+    /* font-display: swap to prevent FOIT (Flash of Invisible Text) */
+  }
+  
+  h1 {
+    @apply font-heading text-h1-mobile md:text-h1;
+  }
+  
+  h2 {
+    @apply font-heading text-h2-mobile md:text-h2;
+  }
+  
+  h3 {
+    @apply font-heading text-h3-mobile md:text-h3;
+  }
+  
+  p {
+    @apply max-w-readable;
+    /* SECTION 05: Paragraph spacing 1.5-2x line height */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* SECTION 03: F-Pattern - Bold first 2-3 words */
+  .bullet-point strong {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  /* SECTION 04: CTA Button Styling - Electric Purple Accent */
+  .btn-primary {
+    @apply bg-accent-purple text-white font-heading font-semibold px-8 py-4 rounded-lg transition-all duration-200;
+    @apply hover:bg-opacity-90 hover:scale-105;
+    @apply active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent-purple text-accent-purple font-heading font-semibold px-8 py-4 rounded-lg transition-all duration-200;
+    @apply hover:bg-accent-purple hover:text-white;
+  }
+  
+  /* SECTION 10: Stripe-inspired sub-pixel precision */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg font-body text-body;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent-purple focus:border-transparent;
+    @apply transition-all duration-150;
+  }
+  
+  /* SECTION 10: Linear-inspired bento grid cards */
+  .bento-card {
+    @apply bg-white rounded-xl p-6 shadow-sm;
+    @apply transition-all duration-300;
+    @apply hover:shadow-md hover:scale-[1.02];
+  }
+}
+
+@layer utilities {
+  /* SECTION 03: Z-Pattern Layout Helper */
+  .z-pattern-grid {
+    display: grid;
+    grid-template-areas:
+      "top-left top-right"
+      "center center"
+      "bottom-left bottom-right";
+  }
+  
+  /* SECTION 05: Max line length enforcement */
+  .readable-width {
+    @apply max-w-readable;
+  }
+  
+  /* SECTION 11: Hero background gradient */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a1a2e 100%);
+  }
+}
