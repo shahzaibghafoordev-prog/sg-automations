@@ -83,7 +83,7 @@ export default function FounderAbout() {
 
                 <div className="flex gap-4 pt-4">
                   
-                    href="https://github.com/shahzaibghafoordev-prog"
+                   <a href="https://github.com/shahzaibghafoordev-prog"
                     className="inline-flex items-center gap-2 text-primary-navy hover:text-accent-purple transition-colors font-heading font-semibold text-sm"
                   >
                     <Github className="w-5 h-5" />
@@ -91,7 +91,7 @@ export default function FounderAbout() {
                     <ExternalLink className="w-3 h-3" />
                   </a>
                   
-                    href="https://www.linkedin.com/in/shahzaib-ghafoor-5671613a3"
+                   <a href="https://www.linkedin.com/in/shahzaib-ghafoor-5671613a3"
                     className="inline-flex items-center gap-2 text-primary-navy hover:text-accent-purple transition-colors font-heading font-semibold text-sm"
                   >
                     <Linkedin className="w-5 h-5" />
