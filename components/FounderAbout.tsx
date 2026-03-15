@@ -35,32 +35,13 @@ export default function FounderAbout() {
                     <div className="text-center p-8">
                       <div className="w-32 h-32 bg-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                         <span className="text-6xl">👤</span>
-                      </div>
-                      <p className="font-heading font-semibold text-sm opacity-70">
-                        FOUNDER PHOTO HERE
-                      </p>
-                      <p className="text-xs opacity-50 mt-2">
-                        Professional, smiling, well-lit
-                        <br />
-                        Min 800x800px
-                        <br />
-                        TO BE REPLACED BEFORE LAUNCH
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Verification Badge */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-success-green text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-heading font-semibold text-xs">Verified Founder</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                      <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+  <img 
+    src="/founder-photo.jpg" 
+    alt="Shahzaib Ghafoor - Founder & Chief Engineer at SG Automations"
+    className="w-full h-full object-cover"
+  />
+</div>
 
             {/* Founder Bio */}
             <div className="md:col-span-3">
@@ -68,7 +49,7 @@ export default function FounderAbout() {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-2xl font-heading font-bold text-primary-navy mb-2">
-                    Hi, I'm [Your Name]
+                    Hi, I'm Shahzaib Ghafoor
                   </h3>
                   <p className="text-accent-purple font-heading font-semibold">
                     Founder & Chief Engineer
@@ -115,7 +96,7 @@ export default function FounderAbout() {
                 {/* SECTION 08: Links to GitHub, LinkedIn (verifiable credentials) */}
                 <div className="flex gap-4 pt-4">
                   <a
-                    href="#"
+                    href="https://github.com/shahzaibghafoordev-prog"
                     className="inline-flex items-center gap-2 text-primary-navy hover:text-accent-purple transition-colors font-heading font-semibold text-sm"
                   >
                     <Github className="w-5 h-5" />
@@ -123,7 +104,7 @@ export default function FounderAbout() {
                     <ExternalLink className="w-3 h-3" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/shahzaib-ghafoor-5671613a3"
                     className="inline-flex items-center gap-2 text-primary-navy hover:text-accent-purple transition-colors font-heading font-semibold text-sm"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -139,7 +120,7 @@ export default function FounderAbout() {
           <div className="mt-12 p-6 bg-primary-navy/5 rounded-xl">
             <p className="text-primary-navy/70 text-center leading-relaxed">
               <strong className="font-semibold text-primary-navy">Location transparency:</strong>{" "}
-              Based in [Your Location]. Technical infrastructure runs on globally distributed systems. 
+              Based in Lahore,Pakistan. Technical infrastructure runs on globally distributed systems. 
               Verifiable credentials and real technical work override any geographic assumptions.
             </p>
           </div>
