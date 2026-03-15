@@ -1,10 +1,25 @@
 "use client";
 
+/**
+ * MAIN PAGE - Updated with new ProductTypes section
+ * NEW: Added ProductTypes component between HowItWorks and InteractiveDemo
+ * STRUCTURE:
+ * 1. Hero
+ * 2. Problem Agitation
+ * 3. How It Works
+ * 4. Product Types (NEW!) - Explains Competitor Report vs Lead Gen
+ * 5. Interactive Demo
+ * 6. Social Proof
+ * 7. Pricing (Updated with bundles)
+ * 8. Founder About
+ * 9. Final CTA
+ */
+
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, Zap, FileText, TrendingUp } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import ProblemAgitation from "@/components/ProblemAgitation";
 import HowItWorks from "@/components/HowItWorks";
+import ProductTypes from "@/components/ProductTypes";
 import InteractiveDemo from "@/components/InteractiveDemo";
 import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
@@ -18,36 +33,37 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* SECTION 02 - Point 01: HERO */}
+      {/* 1. HERO SECTION */}
       <HeroSection onCTAClick={() => setShowOrderFlow(true)} />
       
-      {/* SECTION 02 - Point 02: PROBLEM AGITATION */}
+      {/* 2. PROBLEM AGITATION */}
       <ProblemAgitation />
       
-      {/* SECTION 02 - Point 03: HOW IT WORKS */}
+      {/* 3. HOW IT WORKS */}
       <HowItWorks />
       
-      {/* SECTION 02 - Point 04: INTERACTIVE SAMPLE REPORT */}
-      {/* THE MOST IMPORTANT SECTION */}
+      {/* 4. PRODUCT TYPES - NEW! Explains both offerings */}
+      <ProductTypes onCTAClick={() => setShowOrderFlow(true)} />
+      
+      {/* 5. INTERACTIVE DEMO - Now with working tabs! */}
       <InteractiveDemo />
       
-      {/* SECTION 02 - Point 05: SOCIAL PROOF + EVIDENCE */}
-      {/* Must come BEFORE pricing */}
+      {/* 6. SOCIAL PROOF + EVIDENCE */}
       <SocialProof />
       
-      {/* SECTION 02 - Point 06: PRICING - FULLY VISIBLE */}
+      {/* 7. PRICING - Updated with 2 products + 2 bundles */}
       <Pricing onCTAClick={() => setShowOrderFlow(true)} />
       
-      {/* SECTION 02 - Point 07: FOUNDER / ABOUT */}
+      {/* 8. FOUNDER / ABOUT */}
       <FounderAbout />
       
-      {/* SECTION 02 - Point 08: FINAL CTA + OBJECTIONS */}
+      {/* 9. FINAL CTA + OBJECTIONS */}
       <FinalCTA onCTAClick={() => setShowOrderFlow(true)} />
       
-      {/* SECTION 07: Sticky mobile CTA always visible */}
+      {/* MOBILE STICKY CTA */}
       <MobileStickyCTA onClick={() => setShowOrderFlow(true)} />
       
-      {/* SECTION 07: Micro-Commitment Order Flow Modal */}
+      {/* ORDER FLOW MODAL */}
       {showOrderFlow && (
         <OrderFlow onClose={() => setShowOrderFlow(false)} />
       )}
