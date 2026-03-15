@@ -1,14 +1,5 @@
 "use client";
 
-/**
- * SECTION 02 - Point 07: FOUNDER / ABOUT
- * SECTION 08: Trust Signals - Engineering Credibility From Zero Reviews
- * 
- * NIH-cited study: Smiling founder photos = +16.6% higher success probability
- * A professional founder photo is NON-NEGOTIABLE
- * An avatar or missing photo actively damages conversion
- */
-
 import { Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function FounderAbout() {
@@ -16,7 +7,6 @@ export default function FounderAbout() {
     <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-primary-navy mb-4">
               Built By Engineers Who Understand Scale
@@ -24,7 +14,6 @@ export default function FounderAbout() {
           </div>
 
           <div className="grid md:grid-cols-5 gap-8 items-start">
-            {/* SECTION 08: Founder Photo */}
             <div className="md:col-span-2">
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
@@ -35,7 +24,6 @@ export default function FounderAbout() {
                   />
                 </div>
                 
-                {/* Verification Badge */}
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-success-green text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -47,7 +35,6 @@ export default function FounderAbout() {
               </div>
             </div>
 
-            {/* Founder Bio */}
             <div className="md:col-span-3">
               <div className="space-y-4">
                 <div>
@@ -116,7 +103,6 @@ export default function FounderAbout() {
             </div>
           </div>
 
-          {/* SECTION 08: Geographic Bias Mitigation */}
           <div className="mt-12 p-6 bg-primary-navy/5 rounded-xl">
             <p className="text-primary-navy/70 text-center leading-relaxed">
               <strong className="font-semibold text-primary-navy">Location transparency:</strong>{" "}
